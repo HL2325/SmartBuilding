@@ -1,0 +1,231 @@
+[
+  {
+    "name":"首页",
+    "code": "1001",
+    "default_page": "/home",
+    "subset":[]
+  },
+  {
+    "name": "基础管理",
+    "code": "1002",
+    "default_page": "/base/gardenlst",
+    "subset":[
+      {
+        "name": "园区设置",
+        "code": "1002001",
+        "default_page": "/base/gardenlst",
+        "subset": [
+          {
+            "name": "园区列表",
+            "code": "1002001001",
+            "default_page": "/base/gardenlst"
+          },
+          {
+            "name": "园区列表",
+            "code": "1002001002",
+            "default_page": "/base/gardenset"
+          }
+        ]
+      },
+      {
+        "name": "角色权限",
+        "code": "1002002",
+        "default_page": "/base/roleset",
+        "subset": [
+          {
+            "name": "角色权限配置",
+            "code": "1002002001",
+            "default_page": "/base/roleset"
+          }
+        ]
+      },
+      {
+        "name": "区域设置",
+        "code": "1002003",
+        "default_page": "/base/districlst",
+        "subset":[
+          {
+            "name": "区域列表",
+            "code": "1002003001",
+            "default_page": "/base/districlst"
+          }
+        ]
+      },
+      {
+        "name":"仓库设置",
+        "code": "1002004",
+        "default_page": "/base/storelst",
+        "subset":[
+          {
+            "name": "仓库列表",
+            "code": "1002004001",
+            "default_page": "/base/storelst"
+          }
+        ]
+      },
+      {
+        "name": "企业管理",
+        "code": "1002005",
+        "default_page": "/base/companylist",
+        "subset": [
+          {
+            "name": "企业列表",
+            "code": "1002005001",
+            "default_page": "/base/companylist"
+          },
+          {
+            "name": "员工列表",
+            "code": "1002005002",
+            "default_page": "/base/stafflst"
+          }
+        ]
+      },
+      {
+        "name": "工单设置",
+        "code": "1002006",
+        "default_page": "/base/workplan",
+        "subset": [
+          {
+            "name": "计划制定",
+            "code": "1002006001",
+            "default_page": "/base/workplan"
+          }
+        ]
+      },
+      {
+        "name": "公告管理",
+        "default_page": "/base/noticout",
+        "code": "1002007",
+        "subset": [
+          {
+            "name": "发布公告",
+            "code": "1002007001",
+            "default_page": "/base/noticout"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "设备管理",
+    "default_page": "/device/devicetype",
+    "code":"1003",
+    "subset":[
+      {
+        "name": "设备设置",
+        "code": "1003001",
+        "default_page": "/device/devicetype",
+        "subset": [
+          {
+            "name": "设备类型",
+            "code": "1003001001",
+            "default_page": "/device/devicetype"
+          },
+          {
+            "name": "设备列表",
+            "code": "1003001002",
+            "default_page": "/device/devicelst"
+          }
+        ]
+      },
+      {
+        "name": "设备监控",
+        "code": "1003002",
+        "default_page": "/device/energydev",
+        "subset":[
+          {
+            "name": "能耗设备",
+            "code": "1003002001",
+            "default_page": "/device/energydev"
+          },
+          {
+            "name": "安防设备",
+            "code": "1003002002",
+            "default_page": "/device/securitydev"
+          },
+          {
+            "name": "环境设备",
+            "code": "1003002003",
+            "default_page": "/device/environdev"
+          },
+          {
+            "name": "电器设备",
+            "code": "1003002004",
+            "default_page": "/device/electricdev"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "运维中心",
+    "code": "1004",
+    "default_page": "/operation/maintain",
+    "subset": [
+      {
+        "name": "工单处理",
+        "code": "1004001",
+        "default_page": "/operation/maintain",
+        "subset":[
+          {
+            "name": "维修工单",
+            "code": "1004001001",
+            "default_page": "/operation/maintain"
+          },
+          {
+            "name": "保洁工单",
+            "code": "1004001002",
+            "default_page": "/operation/cleankeeping"
+          },
+          {
+            "name": "保养工单",
+            "code": "1004001003",
+            "default_page": "/operation/upkeep"
+          },
+          {
+            "name": "巡检工单",
+            "code": "1004001004",
+            "default_page": "/operation/polling"
+          }
+        ]
+      },
+      {
+        "name": "计划制定",
+        "code": "1004002",
+        "default_page": "/cleankeeplan",
+        "subset": [
+          {
+            "name": "保洁计划",
+            "code": "1004002001",
+            "default_page": "/cleankeeplan"
+          },
+          {
+            "name": "保养计划",
+            "code": "1004002002",
+            "default_page": "/upkeepplan"
+          },
+          {
+            "name": "巡检计划",
+            "code": "1004002003",
+            "default_page": "/pollingplan"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "财务管理",
+    "code":"1005",
+    "default_page": "/finance"
+  },
+  {
+    "name": "仓库管理",
+    "code":"1006",
+    "default_page": "/storehouse"
+  },
+  {
+    "name": "访客管理",
+    "code":"1007",
+    "default_page": "/visitor"
+  }
+]

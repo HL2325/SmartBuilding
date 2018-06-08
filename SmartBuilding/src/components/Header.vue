@@ -2,8 +2,8 @@
   <div class="head">
     <img class="logo" src="../assets/image/logo.png" alt="">
     <div class="midTopTit">
-       <router-link tag="span" class="slideList" v-for="(l, index) in list" :key="index" :to="l.uri">
-        {{l.name}}
+       <router-link class="slideList" v-for="(l, index) in secondTit" :key="index" @click.native="clickIndex(l.code)" :to="l.default_page">
+         {{l.name}}
       </router-link>
     </div>
     <div class="userInfo">
@@ -16,18 +16,25 @@
 </template>
 
 <script>
+import store from '../store/store.js'
+import * as types from '../store/types.js'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
-    return {
-      list: [
-        {name: '首页', uri: '/home'},
-        {name: '基础管理', uri: '/base'},
-        {name: '设备管理', uri: '/device'},
-        {name: '运维中心', uri: '/operation'},
-        {name: '财务管理',  uri: '/finance'},
-        {name: '仓库管理', uri: '/storehouse'},
-        {name: '访客管理', uri: '/visitor'}
-      ]
+    return {}
+  },
+  computed: {
+    ...mapGetters({
+      secondTit: 'secondTitle'
+    })
+  },
+  methods: {
+    ...mapActions([
+      'setThreeTit'
+    ]),
+    clickIndex (l) {
+      let threeTit = this.secondTit.find(todo => todo.code === l)
+      this.setThreeTit(threeTit)
     }
   }
 }
@@ -36,15 +43,15 @@ export default {
 <style lang="less">
   .head{
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: #00182e;
-    line-height: 70px;
+    line-height: 60px;
     display: flex;
     justify-content: space-between;
     .logo{
       width: 180px;
       height: 40px;
-      margin-top: 15px;
+      margin-top: 10px;
       padding-left: 20px;
     }
     .midTopTit{
@@ -77,7 +84,7 @@ export default {
         background: #fff;
         margin-left: 10px;
         margin-right: 20px;
-        margin-top: 15px;
+        margin-top: 10px;
         float: left;
       }
       .userName{
